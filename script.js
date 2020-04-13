@@ -19,13 +19,13 @@
         clearTodoInput();
 
         const completedBtn = document.createElement("button");
-        completedBtn.classList.add("todo__completed-btn");
+        completedBtn.classList.add("todo__completed-btn", "todo__btn");
         const completedBtnImg = document.createElement("img");
         completedBtnImg.src = "assets/images/icon-check-circle.svg";
         completedBtn.append(completedBtnImg);
 
         const trashBtn = document.createElement("button");
-        trashBtn.classList.add("todo__trash-btn");
+        trashBtn.classList.add("todo__trash-btn", "todo__btn");
         const trashBtnImg = document.createElement("img");
         trashBtnImg.src = "assets/images/icon-trash.svg";
         trashBtn.append(trashBtnImg);
@@ -40,5 +40,30 @@
         todoInput.value = "";
     }
 
+    function checkButtonClick(event) {
+        const clickedBtn = event.target.closest(".todo__btn");
+
+        if (clickedBtn.matches(".todo__trash-btn")) {
+            deleteTodo(event);
+        } else if (clickedBtn.matches(".todo__completed-btn")) {
+            checkOffTodo(event);
+        }
+    }
+    
+    function deleteTodo(event) {
+        const todo = event.target.closest(".todo");
+
+        // Add animation class
+        todo.classList.add("fall");
+        todo.addEventListener("animationend", () => todo.remove());
+    }
+    
+    function checkOffTodo(event) {
+        const todo = event.target.closest(".todo");
+    
+        todo.classList.toggle("completed");
+    }
+
     todoForm.addEventListener("submit", addTodo);
+    todosUl.addEventListener("click", checkButtonClick);
 }

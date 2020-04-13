@@ -80,6 +80,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    transition:
+        opacity 125ms ease-in-out,
+        text-decoration 125ms ease-in-out;
 }
 
 .todo__item {
@@ -99,4 +103,25 @@ body {
 .todo__completed-btn:hover,
 .todo__trash-btn:hover {
     opacity: 1;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: .5;
+}
+
+.fall {
+    animation: falling 300ms ease forwards;
+}
+
+@keyframes falling {
+    from {
+        transform: translateY(0) rotateZ(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(6rem) rotateZ(20deg);
+        opacity: 0;
+    }
 }
