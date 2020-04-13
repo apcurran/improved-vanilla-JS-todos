@@ -18,7 +18,7 @@ body {
     font-size: 1.75rem;
 }
 
-.main {
+.form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,4 +58,45 @@ body {
 
 .form__group__submit:hover {
     background-color: #9ae6b4;
+}
+
+.todos-container {
+    margin: 3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todos-list {
+    min-width: 15rem;
+    list-style: none;
+}
+
+.todo {
+    margin: .5rem 0;
+    background-color: #fff;
+    font-size: 1.25rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo__item {
+    flex-grow: 1;
+    padding: 0 .75rem;
+}
+
+.todo__completed-btn,
+.todo__trash-btn {
+    background-color: transparent;
+    border: none;
+    padding: .5rem;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.todo__completed-btn:hover,
+.todo__trash-btn:hover {
+    opacity: 1;
 }
