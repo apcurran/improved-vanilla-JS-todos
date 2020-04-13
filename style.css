@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #83a4d4;  /* fallback for old browsers */
+    background: linear-gradient(to right, #b6fbff, #83a4d4);
+
+    min-height: 100vh;
+}
+
+.header {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 1.75rem;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.form__group:focus-within {
+    box-shadow: 0 0 20px #4299e1;
+}
+
+.form__group__input,
+.form__group__submit {
+    border: none;
+    padding: .75rem;
+    font-size: 1.1rem;
+    background-color: #fff;
+}
+
+.form__group__input {
+    outline: none;
+}
+
+.form__group__submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    transition: background-color 120ms ease-in-out;
+}
+
+.form__group__submit:hover {
+    background-color: #9ae6b4;
+}
