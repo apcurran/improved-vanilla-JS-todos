@@ -3,7 +3,6 @@
 {
     // Cached DOM selections
     const todoInput = document.querySelector(".form__group__input");
-    // const addTodoBtn = document.querySelector(".form__group__submit");
     const todosUl = document.querySelector(".todos-list");
     const todoForm = document.querySelector(".form");
 
@@ -15,6 +14,7 @@
 
         const newTodoLi = document.createElement("li");
         newTodoLi.classList.add("todo__item");
+
         newTodoLi.textContent = todoInput.value;
         clearTodoInput();
 

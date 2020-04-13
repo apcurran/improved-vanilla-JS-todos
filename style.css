@@ -29,6 +29,11 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #fff;
+    border-radius: 4px;
+}
+
+.form__group__submit {
+    border-radius: 0 4px 4px 0;
 }
 
 .form__group:focus-within {
@@ -111,7 +116,7 @@ body {
 }
 
 .fall {
-    animation: falling 300ms ease forwards;
+    animation: falling 300ms ease-in-out forwards;
 }
 
 @keyframes falling {
