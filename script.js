@@ -67,3 +67,20 @@
     todoForm.addEventListener("submit", addTodo);
     todosUl.addEventListener("click", checkButtonClick);
 }
+
+{
+    // BG Gradient
+    CSS.registerProperty({
+        name: "--light-primary",
+        syntax: "<color>",
+        inherits: false,
+        initialValue: "#b6fbff"
+    });
+
+    CSS.registerProperty({
+        name: "--dark-secondary",
+        syntax: "<color>",
+        inherits: false,
+        initialValue: "#83a4d4"
+    });
+}

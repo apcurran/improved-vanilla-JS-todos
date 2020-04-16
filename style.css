@@ -10,6 +10,21 @@ body {
     background: linear-gradient(to right, #b6fbff, #83a4d4);
 
     min-height: 100vh;
+
+    animation: animate-gradient 4s infinite alternate;
+}
+
+@keyframes animate-gradient {
+    from {
+        background: linear-gradient(to right, var(--dark-secondary), var(--light-primary));
+    }
+
+    to {
+        --dark-secondary: #78ffd6;
+        --light-primary: #a8ff78;
+
+        background: linear-gradient(to right, var(--dark-secondary), var(--light-primary));
+    }
 }
 
 .header {
